@@ -1,15 +1,31 @@
 class Vget < Formula
   desc "Media downloader CLI for various platforms"
   homepage "https://github.com/guiyumin/vget"
-  url "https://github.com/guiyumin/vget/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "d1844f558cb39a541d0b1eac447a31fc6371764f8a3976808b5224b6f3c75367"
+  version "0.10.2"
   license "Apache-2.0"
 
-  depends_on "go" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/guiyumin/vget/releases/download/v0.10.2/vget-darwin-arm64.zip"
+      sha256 "d11ca7f0f0d268930d76c8d2d4e6ac48862c03ec777ef4c8177d365829bcf6bd"
+    else
+      url "https://github.com/guiyumin/vget/releases/download/v0.10.2/vget-darwin-amd64.zip"
+      sha256 "2c4e5511ca3825f7e8b939000e1947e4362af701f90fb93d3ec55beb5cf8937f"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/guiyumin/vget/releases/download/v0.10.2/vget-linux-arm64.zip"
+      sha256 "93705a20f7cc8871453f09336c45d6a7486c34f6321168fc5087c236acffc0eb"
+    else
+      url "https://github.com/guiyumin/vget/releases/download/v0.10.2/vget-linux-amd64.zip"
+      sha256 "ae639af8c93b06f0ef74253848c51d9d211c8bcddc131624aebc9baca92db7fb"
+    end
+  end
 
   def install
-    ldflags = "-s -w -X github.com/guiyumin/vget/internal/version.Version=#{version}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/vget"
+    bin.install "vget"
   end
 
   test do
