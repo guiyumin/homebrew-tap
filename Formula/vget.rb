@@ -5,21 +5,21 @@
 class Vget < Formula
   desc "Media downloader CLI for various platforms"
   homepage "https://github.com/guiyumin/vget"
-  version "0.11.3"
+  version "0.11.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guiyumin/vget/releases/download/v0.11.3/vget_0.11.3_darwin_amd64.zip"
-      sha256 "5581279c907fd36b77d2739a43c7486f8ce8569312764758d03527bd8ccbe803"
+      url "https://github.com/guiyumin/vget/releases/download/v0.11.4/vget_0.11.4_darwin_amd64.zip"
+      sha256 "8fd5fbf35022ce4d8b82d2dd7ce98568b691f963be4f004af37da6a62ed93c96"
 
       def install
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guiyumin/vget/releases/download/v0.11.3/vget_0.11.3_darwin_arm64.zip"
-      sha256 "36cfbd0a40fbdb6bfb0d0bb6a291b8b2a6ffce4399fab46effdcbd6079157d4f"
+      url "https://github.com/guiyumin/vget/releases/download/v0.11.4/vget_0.11.4_darwin_arm64.zip"
+      sha256 "40ad77f0270bf92514937dfa46cd34c239436f7fae1dbc2887fd41bcca6ef255"
 
       def install
         bin.install "vget"
@@ -29,15 +29,15 @@ class Vget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.11.3/vget_0.11.3_linux_amd64.zip"
-      sha256 "32e6a4c4b3bd17d1a16cd9512a6bacd563428cf18d584ce72336879c3a7e628d"
+      url "https://github.com/guiyumin/vget/releases/download/v0.11.4/vget_0.11.4_linux_amd64.zip"
+      sha256 "6376b0e157ef4e52f5fbb19ab7f70447aef763ce5aabb3fe516e5ec339a54174"
       def install
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.11.3/vget_0.11.3_linux_arm64.zip"
-      sha256 "701571d8d095919c2134c1c32aa1a99a4080b45c4904101294c00a6881474299"
+      url "https://github.com/guiyumin/vget/releases/download/v0.11.4/vget_0.11.4_linux_arm64.zip"
+      sha256 "948d9a8a37e616c1d1070efcab51eeee5841c494562f2d68b5b123c36e55efcc"
       def install
         bin.install "vget"
       end
