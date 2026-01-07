@@ -11,7 +11,7 @@ class Vget < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/guiyumin/vget/releases/download/v0.12.1/vget_0.12.1_darwin_amd64.zip"
-      sha256 "839ca0d1daa386f637d89ce954147b316d46487ec8e553cb7fa4f26c188dc18d"
+      sha256 "d13939350d797ae5a9784e2f9b9a29f4ed3340886347a12a2c30d0c3c6ca328f"
 
       def install
         bin.install "vget"
@@ -19,7 +19,7 @@ class Vget < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/guiyumin/vget/releases/download/v0.12.1/vget_0.12.1_darwin_arm64.zip"
-      sha256 "cfbae9d17386f337212b9d99bfc4e0baaca9329ba2070fd1a7c5ae0b82cb5d34"
+      sha256 "9aa921237ce672e8f16f9881789e61040ce4c9e29ea523b0bbb888f7b05d038b"
 
       def install
         bin.install "vget"
@@ -30,14 +30,14 @@ class Vget < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/guiyumin/vget/releases/download/v0.12.1/vget_0.12.1_linux_amd64.zip"
-      sha256 "88c036d8be42e39abdc320d4a0d7c6f670d5144e6e7dfc30c8c4dbdade67993f"
+      sha256 "0d9c7c962d33a1017bd4bc0d3e516517823adb749d87012849f39c82d616cdbb"
       def install
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/guiyumin/vget/releases/download/v0.12.1/vget_0.12.1_linux_arm64.zip"
-      sha256 "12c810b9f99ae6cb02da10f527988a8a5ebc87c78ea72ccf35b8d0d93e307bd1"
+      sha256 "0f13c88557cfdfdf0f8744a3fea2099c12b89bbfd86d6f86eb39c6bfb039658e"
       def install
         bin.install "vget"
       end
