@@ -1,16 +1,16 @@
 class Maily < Formula
   desc "A terminal email client for Gmail"
   homepage "https://github.com/guiyumin/maily"
-  version "0.6.32"
+  version "0.6.33"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/guiyumin/maily/releases/download/v0.6.32/maily_0.6.32_darwin_arm64.zip"
-      sha256 "c42a3ae0d83dbebf44fcbe8ea79abfca261cdaebff9898f7e3ee5071d9a3df38"
+      url "https://github.com/guiyumin/maily/releases/download/v0.6.33/maily_0.6.33_darwin_arm64.zip"
+      sha256 "879d0f43d934a72d143bc39e3c932c89e624673ea37be2581436e7f825c2115b"
     else
-      url "https://github.com/guiyumin/maily/releases/download/v0.6.32/maily_0.6.32_darwin_amd64.zip"
-      sha256 "5194f33063f27f36b0f6d0e67cf37998dc48c05ac3f440845e866aed14e0f238"
+      url "https://github.com/guiyumin/maily/releases/download/v0.6.33/maily_0.6.33_darwin_amd64.zip"
+      sha256 "faa51f0f1cb47bc9483858a01fb99d2dd1f15a148438550887022d8be4518c90"
     end
   end
 
