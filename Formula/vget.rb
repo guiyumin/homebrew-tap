@@ -5,23 +5,23 @@
 class Vget < Formula
   desc "Media downloader CLI for various platforms"
   homepage "https://github.com/guiyumin/vget"
-  version "0.12.16"
+  version "0.13.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guiyumin/vget/releases/download/v0.12.16/vget_0.12.16_darwin_amd64.zip"
-      sha256 "3d7b7666dadd5f41a9ded8f2556c468c36c46d9ea13ea1f82e15248115f78762"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.2/vget_0.13.2_darwin_amd64.zip"
+      sha256 "9aecadc7807b449f506dd56422abd739de8faeacd4d3bc2c41fce9c4dcb39902"
 
-      def install
+      define_method(:install) do
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guiyumin/vget/releases/download/v0.12.16/vget_0.12.16_darwin_arm64.zip"
-      sha256 "b62c7bae14d6639c2bcb03d55023d91d4dcdd3ab16bef037d3e915a6b7659a4d"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.2/vget_0.13.2_darwin_arm64.zip"
+      sha256 "b0e3074e527564bb0ea4e0448b415fe7ed50b6163574829988f3d9b133e90dae"
 
-      def install
+      define_method(:install) do
         bin.install "vget"
       end
     end
@@ -29,16 +29,16 @@ class Vget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.12.16/vget_0.12.16_linux_amd64.zip"
-      sha256 "7e476fea4ba20896564c192963e27581bba86e7dd6fb4e2c86b6a2e27882477b"
-      def install
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.2/vget_0.13.2_linux_amd64.zip"
+      sha256 "ae3d8340623f6c19ad45c465d97f45c6de0ccc81f77ee15fe33dbb0ad6d67234"
+      define_method(:install) do
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.12.16/vget_0.12.16_linux_arm64.zip"
-      sha256 "b01a18e28e488279d3c75562c8696cc6c5b7ea97bd69ad71e8411b8e048881f3"
-      def install
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.2/vget_0.13.2_linux_arm64.zip"
+      sha256 "d5f53a8e4cfdc4c4c0ac915d6ad43cd8d0fc5596c55b3db7d97211e350bd68cc"
+      define_method(:install) do
         bin.install "vget"
       end
     end
