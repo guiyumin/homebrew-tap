@@ -5,21 +5,21 @@
 class Vget < Formula
   desc "Media downloader CLI for various platforms"
   homepage "https://github.com/guiyumin/vget"
-  version "0.13.4"
+  version "0.13.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guiyumin/vget/releases/download/v0.13.4/vget_0.13.4_darwin_amd64.zip"
-      sha256 "6006c6a6a8a21da9e9cbd18203ad79139f23d2015aef066b1d31f2db47191180"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.5/vget_0.13.5_darwin_amd64.zip"
+      sha256 "060e5d18a97135521be4867c0d3d859f22aed778632d87a5ebae57970c9fbc7e"
 
       define_method(:install) do
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guiyumin/vget/releases/download/v0.13.4/vget_0.13.4_darwin_arm64.zip"
-      sha256 "5fa47b6611956f11db1801e9bef5b9cc161943fbc73eb9e59713da5f341a77ff"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.5/vget_0.13.5_darwin_arm64.zip"
+      sha256 "524f908d6a2bb1da25f23d77778d9c128ef74dec9284c90182fa0f9566d6ee41"
 
       define_method(:install) do
         bin.install "vget"
@@ -29,15 +29,15 @@ class Vget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.13.4/vget_0.13.4_linux_amd64.zip"
-      sha256 "419e65fb1f786af86df0aecf7fa3f6da6dc38e666feb6b7edefb4520dbd6e9e3"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.5/vget_0.13.5_linux_amd64.zip"
+      sha256 "2b23903082b80e6c26f52903691f3a363344cfe413c9e9c473ccb3216d13c495"
       define_method(:install) do
         bin.install "vget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guiyumin/vget/releases/download/v0.13.4/vget_0.13.4_linux_arm64.zip"
-      sha256 "6b990cef77bf2c0dc3f6ee05770c3722c9e1816fbbc41560e5de224b4b835013"
+      url "https://github.com/guiyumin/vget/releases/download/v0.13.5/vget_0.13.5_linux_arm64.zip"
+      sha256 "f8324f25c44e73d6c475bf9a7447c22db4061e332f4e6823340c374540a91c50"
       define_method(:install) do
         bin.install "vget"
       end
